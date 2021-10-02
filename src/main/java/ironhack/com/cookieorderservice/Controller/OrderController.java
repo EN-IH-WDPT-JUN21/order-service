@@ -20,7 +20,7 @@ public class OrderController {
     OrderReceiptRepository orderReceiptRepository;
 
     @GetMapping("/{id}")
-    public OrderReceipt getOrderReceipt(@PathVariable Long orderId){
+    public OrderReceipt getOrderReceipt(@PathVariable(name = "id") Long orderId){
         Optional<OrderReceipt> foundReceipt = orderReceiptRepository.findById(orderId);
         return foundReceipt.orElse(null);
     }

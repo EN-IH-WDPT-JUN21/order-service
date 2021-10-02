@@ -24,11 +24,11 @@ public class OrderReceipt {
     private Long orderReference;
     private Long buyersId;
     private int quantity;
-    private String orderList;
+    //private String orderList;
 
-    public OrderReceipt(Long buyersId, int quantity, String orderList) {
+    public OrderReceipt(Long buyersId, int quantity) {
         this.buyersId = buyersId;
         this.quantity = quantity;
-        this.orderList = orderList;
+        //this.orderList = orderList;
     }
 }

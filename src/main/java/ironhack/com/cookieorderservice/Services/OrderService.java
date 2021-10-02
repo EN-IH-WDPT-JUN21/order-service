@@ -22,7 +22,7 @@ public class OrderService {
     public OrderReceipt constructOrderReceipt(Long buyerId, int quantity){
 
         List<FortuneCookie> orderedCookies = cookieServiceProxy.getCookiesByNumber(quantity);
-        OrderReceipt orderReceipt = new OrderReceipt(buyerId, quantity, orderedCookies.toString());
+        OrderReceipt orderReceipt = new OrderReceipt(buyerId, quantity);
         orderReceiptRepository.save(orderReceipt);
         return orderReceipt;
     }
